@@ -1,0 +1,8 @@
+version: '3'
+services:
+  testcafe:
+    image: 'testcafe/testcafe'
+    volumes:
+      - ./testcafe:/tests
+    command: chromium --no-sandbox,firefox /tests/test-example.js
+    #entrypoint: ["/opt/testcafe/docker/testcafe-docker.sh", "chromium", "/tests/test-example.js"]
